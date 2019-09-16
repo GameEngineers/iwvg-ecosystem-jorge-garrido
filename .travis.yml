@@ -18,7 +18,7 @@ script:
   - mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
 
   #SONARCLOUD
-  #- mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=0f8f9b9557b3328f56bf24cfafdcc6e203464a99 -Dsonar.login=$SONAR
+  - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=0f8f9b9557b3328f56bf24cfafdcc6e203464a99 -Dsonar.login=$SONAR
 
 #Deploy https://iwvg-ecosystem.herokuapp.com/api
 #deploy:
