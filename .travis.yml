@@ -21,10 +21,10 @@ script:
   - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=0f8f9b9557b3328f56bf24cfafdcc6e203464a99 -Dsonar.login=$SONAR
 
 #Deploy https://iwvg-ecosystem.herokuapp.com/api
-#deploy:
-#  provider: heroku
-#  api_key:
-#    secure: $HEROKU
-#  on:
-#    branch: master
-#  app: iwvg-ecosystem, por defecto, nombre del artefacto
+deploy:
+  provider: heroku
+  api_key:
+    secure: $HEROKU
+  on:
+    branch: master
+  app: iwvg-ecosystem-jorge-garrido
