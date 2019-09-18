@@ -2,7 +2,7 @@
 ## Plantilla para la práctica de Ecosistema (IWVG-ecosystem)
 > Plantilla con Spring básico (API, test) 
 
-##Estado del Codigo
+## Estado del Codigo
 [![Build Status](https://travis-ci.org/GameEngineers/iwvg-ecosystem-jorge-garrido.svg?branch=develop)](https://travis-ci.org/GameEngineers/iwvg-ecosystem-jorge-garrido)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-ecosystem-jorge-garrido&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-ecosystem-jorge-garrido)
 [![BCH compliance](https://bettercodehub.com/edge/badge/GameEngineers/iwvg-ecosystem-jorge-garrido?branch=master)](https://bettercodehub.com/)
