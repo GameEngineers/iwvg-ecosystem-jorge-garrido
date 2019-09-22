@@ -4,8 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 class DecimalCollectionTest {
     private DecimalCollection decimalCollection;
@@ -49,6 +48,26 @@ class DecimalCollectionTest {
     @Test
     void testHigherArithmeticExceptionIfEmpty() {
         assertThrows(ArithmeticException.class, () -> new DecimalCollection().higher());
+    }
+
+    @Test
+    void testAvg(){
+        assertEquals(1.5, this.decimalCollection.avg(), 10e-5);
+    }
+
+    @Test
+    void testAvgArithmeticExceptionIfEmpty() {
+        assertThrows(ArithmeticException.class, () -> new DecimalCollection().avg());
+    }
+
+    @Test
+    void testMinor() {
+        assertEquals(-1.0, this.decimalCollection.minor(), 10e-5);
+    }
+
+    @Test
+    void testMinorArithmeticExceptionIfEmpty() {
+        assertThrows(ArithmeticException.class, () -> new DecimalCollection().minor());
     }
 
 }

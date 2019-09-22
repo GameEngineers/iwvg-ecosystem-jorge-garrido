@@ -36,9 +36,9 @@ public class DecimalCollection {
 
     }
 
-    public OptionalDouble avg() {
+    public double avg() {
         this.validateIsNullOrEmpty();
-        return this.collection.stream().mapToDouble(Double::doubleValue).average();
+        return this.collection.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     }
 
     private void validateIsNullOrEmpty() {
@@ -50,6 +50,11 @@ public class DecimalCollection {
     public double higher() {
         this.validateIsNullOrEmpty();
         return Collections.max(this.collection);
+    }
+
+    public double minor() {
+        this.validateIsNullOrEmpty();
+        return Collections.min(this.collection);
     }
 
 }
