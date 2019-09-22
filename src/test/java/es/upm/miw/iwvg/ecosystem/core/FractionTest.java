@@ -43,4 +43,9 @@ class FractionTest {
     void testGetDenominator() {
         assertEquals(2, fraction.getDenominator());
     }
+
+    @Test
+    void testProper() {
+        assertEquals(true, fraction.proper());
+    }
 }

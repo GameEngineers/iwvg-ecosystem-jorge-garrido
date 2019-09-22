@@ -53,4 +53,8 @@ public class Fraction {
         return denominator;
     }
 
+    public boolean proper() {
+        return numerator < denominator;
+    }
+
 }
