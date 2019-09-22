@@ -53,4 +53,16 @@ public class Fraction {
         return denominator;
     }
 
+    public boolean proper() {
+        return numerator < denominator;
+    }
+
+    public boolean improper() {
+        return denominator < numerator;
+    }
+
+    public Fraction multiply(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.getNumerator(), this.denominator * fraction.getDenominator());
+    }
+
 }

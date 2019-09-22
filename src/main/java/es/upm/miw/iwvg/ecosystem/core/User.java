@@ -8,10 +8,13 @@ public class User {
 
     private String familyName;
 
-    public User(int number, String name, String familyName) {
+    private String secondFamilyName;
+
+    public User(int number, String name, String familyName, String secondFamilyName) {
         this.number = number;
         this.name = this.format(name);
         this.familyName = this.format(familyName);
+        this.secondFamilyName = this.format(secondFamilyName);
     }
 
     private String format(String string) {
@@ -19,11 +22,15 @@ public class User {
     }
 
     public String fullName() {
-        return this.name + " " + this.familyName;
+        return this.name + " " + this.familyName + " " + this.secondFamilyName;
     }
 
     public String initials() {
         return this.name.substring(0, 1) + ".";
+    }
+
+    public String fullNameToUpperCase() {
+        return this.name.toUpperCase() + " " + this.familyName.toUpperCase() + " " + this.secondFamilyName.toUpperCase();
     }
 
     public int getNumber() {
@@ -36,6 +43,10 @@ public class User {
 
     public String getFamilyName() {
         return this.familyName;
+    }
+
+    public String getSecondFamilyName() {
+        return this.secondFamilyName;
     }
 
 }
