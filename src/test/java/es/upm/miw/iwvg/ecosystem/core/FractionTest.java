@@ -48,4 +48,9 @@ class FractionTest {
     void testProper() {
         assertEquals(true, fraction.proper());
     }
+
+    @Test
+    void testImproper() {
+        assertEquals(false, fraction.improper());
+    }
 }
