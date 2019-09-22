@@ -12,20 +12,21 @@ class UserTest {
 
     @BeforeEach
     void before() {
-        user = new User(1, "jorge", "garrido");
+        user = new User(1, "jorge", "garrido", "estevez");
     }
 
     @Test
-    void testUser(){
-        user = new User(0, "a", "b");
+    void testUser() {
+        user = new User(0, "a", "b", "c");
         assertEquals(0, user.getNumber());
         assertEquals("A", user.getName());
         assertEquals("B", user.getFamilyName());
+        assertEquals("C", user.getSecondFamilyName());
     }
 
     @Test
-    void testUserIndexOutOfBoundsException(){
-        assertThrows(IndexOutOfBoundsException.class, () -> new User(0, "", ""));
+    void testUserIndexOutOfBoundsException() {
+        assertThrows(IndexOutOfBoundsException.class, () -> new User(0, "", "", ""));
     }
 
     @Test
@@ -44,12 +45,22 @@ class UserTest {
     }
 
     @Test
+    void testUserGetSecondFamilyName() {
+        assertEquals("Estevez", user.getSecondFamilyName());
+    }
+
+    @Test
     void testUserInitials() {
         assertEquals("J.", user.initials());
     }
 
     @Test
     void testFullName() {
-        assertEquals("Jorge Garrido", user.fullName());
+        assertEquals("Jorge Garrido Estevez", user.fullName());
+    }
+
+    @Test
+    void testfullNameToUpperCase() {
+        assertEquals("JORGE GARRIDO ESTEVEZ", user.fullNameToUpperCase());
     }
 }
