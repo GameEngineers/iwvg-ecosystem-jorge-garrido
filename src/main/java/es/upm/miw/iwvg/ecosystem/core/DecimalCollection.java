@@ -3,6 +3,7 @@ package es.upm.miw.iwvg.ecosystem.core;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.OptionalDouble;
 
 public class DecimalCollection {
 
@@ -35,6 +36,11 @@ public class DecimalCollection {
 
     }
 
+    public double avg() {
+        this.validateIsNullOrEmpty();
+        return this.collection.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
+    }
+
     private void validateIsNullOrEmpty() {
         if ((this.collection == null) || this.collection.isEmpty()) {
             throw new ArithmeticException("Null or Empty collection");
@@ -44,6 +50,11 @@ public class DecimalCollection {
     public double higher() {
         this.validateIsNullOrEmpty();
         return Collections.max(this.collection);
+    }
+
+    public double minor() {
+        this.validateIsNullOrEmpty();
+        return Collections.min(this.collection);
     }
 
 }
