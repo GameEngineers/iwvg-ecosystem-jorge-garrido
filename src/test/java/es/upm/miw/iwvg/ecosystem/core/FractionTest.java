@@ -53,4 +53,12 @@ class FractionTest {
     void testImproper() {
         assertEquals(false, fraction.improper());
     }
+
+    @Test
+    void testMultiply() {
+        Fraction fraction2 = new Fraction(3, 3);
+        Fraction result = fraction.multiply(fraction2);
+        assertEquals(3, result.getNumerator());
+        assertEquals(6, result.getDenominator());
+    }
 }

@@ -61,4 +61,8 @@ public class Fraction {
         return denominator < numerator;
     }
 
+    public Fraction multiply(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.getNumerator(), this.denominator * fraction.getDenominator());
+    }
+
 }
