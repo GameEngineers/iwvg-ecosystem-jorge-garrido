@@ -3,6 +3,7 @@ package es.upm.miw.iwvg.ecosystem.core;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.OptionalDouble;
 
 public class DecimalCollection {
 
@@ -33,6 +34,11 @@ public class DecimalCollection {
         // return this.collection.stream().mapToDouble(value -> value).sum();
         return this.collection.stream().mapToDouble(Double::doubleValue).sum();
 
+    }
+
+    public OptionalDouble avg() {
+        this.validateIsNullOrEmpty();
+        return this.collection.stream().mapToDouble(Double::doubleValue).average();
     }
 
     private void validateIsNullOrEmpty() {
