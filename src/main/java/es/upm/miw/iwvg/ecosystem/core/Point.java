@@ -23,7 +23,7 @@ public class Point {
     }
 
     public double module() {
-        return Math.sqrt((double) this.x * this.x + this.y * this.y + this.z * this.z);
+        return Math.sqrt((double) (this.x * this.x) + (this.y * this.y) + (this.z * this.z));
     }
 
     public double phase() {
@@ -36,7 +36,7 @@ public class Point {
         this.z -= origin.getZ();
     }
 
-    private int getZ() {
+    public int getZ() {
         return this.z;
     }
 
@@ -46,6 +46,18 @@ public class Point {
 
     public int getY() {
         return this.y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setZ(int z) {
+        this.z = z;
     }
 
     @Override
