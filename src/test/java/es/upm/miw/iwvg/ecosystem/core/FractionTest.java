@@ -43,4 +43,22 @@ class FractionTest {
     void testGetDenominator() {
         assertEquals(2, fraction.getDenominator());
     }
+
+    @Test
+    void testProper() {
+        assertEquals(true, fraction.proper());
+    }
+
+    @Test
+    void testImproper() {
+        assertEquals(false, fraction.improper());
+    }
+
+    @Test
+    void testMultiply() {
+        Fraction fraction2 = new Fraction(3, 3);
+        Fraction result = fraction.multiply(fraction2);
+        assertEquals(3, result.getNumerator());
+        assertEquals(6, result.getDenominator());
+    }
 }
